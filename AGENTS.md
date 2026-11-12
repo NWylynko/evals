@@ -49,8 +49,8 @@ These were established by experiment; do not "simplify" them away.
 ## Endpoint
 
 `PI_EVAL_BASE_URL`, required, no default. Schema in `.env.schema` (varlock, loaded
-by `piHarnessConfig.ts`); the value lives in Infisical (`dev`) and the `pnpm eval*`
-scripts inject it with `infisical run`. The repo is meant to be public — keep hostnames out of it.
+by `piHarnessConfig.ts`); the value lives in a gitignored `.env`. It is not a secret,
+so no Infisical. The repo is meant to be public — keep hostnames out of it.
 
 Two model endpoints, and the difference matters:
 

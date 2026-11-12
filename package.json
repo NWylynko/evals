@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "eval": "infisical run --env=dev -- node src/pi-harness/runEvalMatrix.ts",
-    "eval:single": "infisical run --env=dev -- vitest run",
-    "eval:watch": "infisical run --env=dev -- vitest",
+    "eval": "node src/pi-harness/runEvalMatrix.ts",
+    "eval:single": "vitest run",
+    "eval:watch": "vitest",
     "report": "node src/pi-harness/serveEvalReport.ts",
     "typecheck": "tsc --noEmit"
   },

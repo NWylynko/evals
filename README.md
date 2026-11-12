@@ -29,12 +29,10 @@ Requires the `pi` CLI on `PATH` and an LM Studio server, set by `PI_EVAL_BASE_UR
 (e.g. `http://localhost:1234/v1`). It is required with no default — the schema is in
 `.env.schema` and [varlock](https://varlock.dev) fails at startup if it's missing.
 
-The `pnpm eval*` scripts inject it from Infisical (`infisical run --env=dev`). Without
-Infisical, set it yourself and call the commands directly:
+Put it in a gitignored `.env` (varlock loads it), or export it in your shell:
 
 ```bash
-PI_EVAL_BASE_URL=http://localhost:1234/v1 node src/pi-harness/runEvalMatrix.ts
-PI_EVAL_BASE_URL=http://localhost:1234/v1 npx vitest run
+echo 'PI_EVAL_BASE_URL=http://localhost:1234/v1' > .env
 ```
 
 ## Writing an eval
